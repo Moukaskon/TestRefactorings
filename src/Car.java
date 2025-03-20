@@ -4,10 +4,12 @@ class Car {
     private String tyresBrand;
     private String size;
     private String lastChange;
+    private Tyres tyres;
 
     public Car(String brand, int cc, String tyresBrand, String size, String lastChange){
         this.brand = brand;
         this.cc = cc;
+        tyres = new Tyres(tyresBrand, size, lastChange);
         this.tyresBrand = tyresBrand;
         this.size = size;
         this.lastChange = lastChange;
@@ -22,15 +24,15 @@ class Car {
     }
 
     public void printTyresBrand(){
-        System.out.println("Tyres Brand: " + tyresBrand);
+        tyres.printTyresBrand();
     }
 
     public void printSize(){
-        System.out.println("Tyres size: " + size);
+        tyres.printSize();
     }
 
     public void printLastChange(){
-        System.out.println("Tyres last changed at: " + lastChange);
+        tyres.printLastChange();
     }
 
 }
